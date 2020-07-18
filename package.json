@@ -1,0 +1,48 @@
+{
+  "name": "template-gatsby-contentful",
+  "private": true,
+  "description": "A template starter for Gatsby + Contentful stack. Set up with absolute imports, TS, Sass, and Prettier.",
+  "version": "0.1.0",
+  "author": "Matt Irizarry <matthew@irizarry.dev>",
+  "dependencies": {
+    "@types/react-helmet": "^5.0.15",
+    "@types/uuid": "^3.4.7",
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.19.10",
+    "gatsby-cli": "^2.8.28",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-manifest": "^2.2.40",
+    "gatsby-plugin-offline": "^3.0.33",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-resolve-src": "^2.0.0",
+    "gatsby-plugin-sass": "^2.1.27",
+    "gatsby-plugin-sharp": "^2.4.4",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-source-contentful": "^2.1.84",
+    "gatsby-source-filesystem": "^2.1.47",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "global": "^4.4.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "react-structured-data": "^0.0.14",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "prettier": "^1.19.1"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "pretty": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "clean": "gatsby clean"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pretty"
+    }
+  }
+}

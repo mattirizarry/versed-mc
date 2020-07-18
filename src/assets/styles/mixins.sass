@@ -1,0 +1,25 @@
+@mixin for-size($range)
+  @if $range == mobile-sm
+    @media (max-width: #{$grid-mobile-sm - 1}) 
+      @content 
+  @elseif $range == mobile-md
+    @media (min-width: $grid-mobile-md)
+      @content
+  @elseif $range == mobile-lg
+    @media (min-width: $grid-mobile-lg)
+      @content
+  @elseif $range == tablet
+    @media (min-width: $grid-tablet)
+      @content
+  @else if $range == tablet-lg
+    @media (min-width: $grid-tablet-lg) 
+      @content
+  @else if $range == laptop
+    @media (min-width: $grid-laptop)
+      @content
+  @else if $range == desktop
+    @media (min-width: $grid-desktop) 
+      @content
+  @else if $range == ultrawide
+    @media (min-width: $grid-ultrawide) 
+      @content
