@@ -6,6 +6,8 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 
 import Navigation from '@/components/Navigation'
+import Link from '@/components/icons/Link'
+import Discord from '@/components/icons/Discord'
 
 const Header = () => {
   const query = useStaticQuery(
@@ -75,12 +77,15 @@ const Header = () => {
       <Navigation active={navigationActive} />
       <section className="quick-info">
         <section className="server-info">
+          <Link />
           <p>
-            <strong>{serverOnline} playing now</strong>
+            <strong>{serverOnline} </strong>
+            playing now
           </p>
           <a onClick={_handleCopyIp}>play.versedmc.com</a>
         </section>
         <section className="discord-info">
+          <Discord />
           <p>
             <strong>{discordOnline}</strong> online now
           </p>

@@ -1,6 +1,6 @@
 .site-header
   display: grid
-  grid: 10rem / 6rem auto
+  grid: 10rem / 6rem 18rem
   justify-content: space-between
   posotion: relative
   border-bottom: 1px solid $lightgray
@@ -16,8 +16,10 @@
     left: -24rem
     z-index: 9
     transition: .35s ease-in-out
-    border-right: 1px solid $lightgray
-    background: $gray
+    //border-right: 1px solid $lightgray
+    //background: $gray
+    background: rgba($gray, 0.5)
+    backdrop-filter: blur(2rem)
 
     &.is-active
       transform: translateX(24rem)
@@ -29,10 +31,12 @@
       row-gap: 2rem      
 
       a
-        color: $white
+        color: $orange
         font-size: 1.6rem
-        text-decoration: none
         font-weight: bold
+        font-family: $font-bold
+        font-weight: bold
+        text-decoration: none
 
   .gatsby-image-wrapper
     height: 6rem
@@ -48,7 +52,36 @@
     padding: 0.5rem 1rem
     
   .discord-info, .server-info
-    display: grid
-    grid: 1fr 1fr / auto
-    place-self: center
+    align-self: center
     text-align: center
+    font-family: $font-normal
+    font-size: $font-12
+    color: $white
+    cursor: pointer
+
+    strong
+      font-weight: bold
+      color: $orange
+
+  .server-info
+    display: grid
+    grid: auto / 2.4rem 1fr
+
+    .link-icon
+      fill: $orange
+      height: 1.5rem
+      width: 1.5rem
+      grid-area: 1 / 1 / 3 / 1
+      place-self: center
+    
+  .discord-info 
+    display: grid
+    grid: auto / 1fr 2.4rem
+    
+    .discord-icon
+      fill: $orange
+      height: 2.4rem
+      width: 2.4rem
+      grid-area: 1 / 2 / 3 / 3
+      place-self: center
+
