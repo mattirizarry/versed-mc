@@ -24,6 +24,9 @@
 
     .site-links
       margin: 10rem 2rem
+      display: grid
+      grid-auto-flow: row
+      row-gap: 2rem      
 
       a
         color: $white
@@ -35,3 +38,17 @@
     height: 6rem
     width: 17rem
     align-self: center
+
+  .quick-info
+    grid-area: 2 / 1 / 3 / 3
+    display: grid
+    grid: auto / 1fr 1fr
+    justify-content: space-between
+    background: $lightgray
+    padding: 0.5rem 1rem
+    
+  .discord-info, .server-info
+    display: grid
+    grid: 1fr 1fr / auto
+    place-self: center
+    text-align: center
