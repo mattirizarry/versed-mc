@@ -31,15 +31,16 @@ const Header = () => {
       method: 'GET',
       mode: 'cors',
       headers: {
-        'Content-Type': 'application/json',
-      },
+        'Content-Type': 'application/json'
+      }
     })
-      .then(resp => resp.json())
+      .then((resp) => resp.json())
       .then(data => setDiscordOnline(data.presence_count))
 
     fetch('https://api.mcsrvstat.us/2/play.versedmc.com')
-      .then(resp => resp.json())
+      .then((resp) => resp.json())
       .then(data => setServerOnline(data.players.online))
+
   }, [])
 
   const _handleNavigation = (e: SyntheticEvent) => {
@@ -47,10 +48,9 @@ const Header = () => {
   }
 
   const _handleCopyIp = (e: SyntheticEvent) => {
-    const ip = 'play.versedmc.com'
+    const ip = "play.versedmc.com"
 
-    navigator.clipboard
-      .writeText(ip)
+    navigator.clipboard.writeText(ip)
       .then(() => {
         console.log('async: copy was successful')
       })
@@ -75,15 +75,11 @@ const Header = () => {
       <Navigation active={navigationActive} />
       <section className="quick-info">
         <section className="server-info">
-          <p>
-            <strong>{serverOnline} playing now</strong>
-          </p>
+          <p><strong>{ serverOnline } playing now</strong></p>
           <a onClick={_handleCopyIp}>play.versedmc.com</a>
         </section>
         <section className="discord-info">
-          <p>
-            <strong>{discordOnline}</strong> online now
-          </p>
+          <p><strong>{ discordOnline }</strong> online now</p>
           <a>Join our Discord!</a>
         </section>
       </section>

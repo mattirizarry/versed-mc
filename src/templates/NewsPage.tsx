@@ -17,15 +17,11 @@ interface Props {
   }
 }
 
-const NewsPage: FC<Props> = ({
-  pageContext: {
-    postBody: { json },
-  },
-}) => {
+const NewsPage: FC<Props> = ({ pageContext: { postBody: { json }}}) => {
   return (
     <Layout>
       <SEO title="News Page" />
-      {documentToReactComponents(json, options)}
+      { documentToReactComponents(json, options) }
     </Layout>
   )
 }

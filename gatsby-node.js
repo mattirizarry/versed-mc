@@ -10,7 +10,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
-exports.createPages = ({ graphql, actions: { createPage } }) => {
+exports.createPages = ({ graphql, actions: { createPage} }) => {
   return new Promise((resolve, reject) => {
     const templateNewsPage = path.resolve('./src/templates/NewsPage.tsx')
 
@@ -30,7 +30,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
             }
           }
         `
-      ).then(result => {
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors)
           reject(result.errors)
@@ -38,11 +38,11 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
 
         const news = result.data.allContentfulNews.nodes
 
-        news.map(post => {
+        news.map((post) => {
           createPage({
-            path: `/news/${post.pageSlug}`,
+            path: `/news/${ post.pageSlug }`,
             component: templateNewsPage,
-            context: post,
+            context: post
           })
         })
       })

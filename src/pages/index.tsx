@@ -20,7 +20,7 @@ const IndexPage = () => {
             pageSlug
           }
         }
-      }
+      }    
     `
   )
 
