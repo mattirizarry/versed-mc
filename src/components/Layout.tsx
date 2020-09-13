@@ -16,7 +16,6 @@ const Layout: FC<Props> = ({ children }) => {
     <section className="main-site">
       <Header />
       <main className="site-content">{children}</main>
-      
     </section>
   )
 }
