@@ -12,13 +12,10 @@ interface Props {
 }
 
 const Layout: FC<Props> = ({ children }) => {
-
   return (
     <section className="main-site">
       <Header />
-      <main className="site-content">
-        { children }
-      </main>
+      <main className="site-content">{children}</main>
       <Footer />
     </section>
   )
