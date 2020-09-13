@@ -9,11 +9,10 @@ import { navigationRoutes } from '@/config/routes'
 import { Route } from '@/models/route'
 
 interface Props {
-  handler: any
-  isOpen: boolean
+  active: boolean
 }
 
-const Navigation: FC<Props> = ({ handler, isOpen }) => {
+const Navigation: FC<Props> = ({ active }) => {
   const _renderLinks = () => {
     return navigationRoutes.map((route: Route) => {
       const { slug, label } = route
@@ -32,8 +31,8 @@ const Navigation: FC<Props> = ({ handler, isOpen }) => {
   }
 
   return (
-    <nav className="site-nav">
-      {_renderLinks()}
+    <nav className={`site-nav ${active && 'is-active'}`}>
+      <ul className="site-links">{_renderLinks()}</ul>
     </nav>
   )
 }
