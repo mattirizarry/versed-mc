@@ -3,7 +3,6 @@
 import { createElement, FC, ReactNode } from 'react'
 
 import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 import '@/assets/styles/app.sass'
 
