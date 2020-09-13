@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Template Gatsby and Contentful Repo`,
+    title: `VersedMC`,
     description: ``,
     author: `Matt Irizarry <matthewjirizarry@gmail.com>`,
   },
@@ -32,8 +32,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Template Gatsby Contentful`,
-        short_name: `TGC`,
+        name: `VersedMC`,
+        short_name: `VMC`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
