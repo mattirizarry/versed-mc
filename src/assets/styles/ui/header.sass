@@ -12,7 +12,7 @@
     z-index: 10
 
   .site-nav
-    position: absolute
+    position: fixed
     height: 100%
     width: 24rem
     bottom: 0
@@ -22,6 +22,7 @@
     background: rgba($gray, 0.5)
     backdrop-filter: blur(2rem)
     padding: 10rem 2rem 0
+    overflow: hidden
 
     &.is-active
       transform: translateX(24rem)
