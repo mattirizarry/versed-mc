@@ -15,11 +15,11 @@ const NewsCard: FC<NewsModel> = ({
   author,
   pageSlug,
   featuredImage,
-  createdAt,
+  createdAt
 }) => {
   const [modalActive, setModalActive] = useState<boolean>(false)
 
-  const _handleModal = (e: React.MouseEvent) => {
+  const _handleModal = (e: React.MouseEvent | React.TouchEvent) => {
     setModalActive(!modalActive)
   }
 
@@ -35,6 +35,8 @@ const NewsCard: FC<NewsModel> = ({
           className="author-information"
           onMouseEnter={_handleModal}
           onMouseLeave={_handleModal}
+          onTouchStart={_handleModal}
+          onTouchEnd={_handleModal}
         >
           <Image
             className="author-profile"
