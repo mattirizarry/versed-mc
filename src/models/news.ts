@@ -1,4 +1,4 @@
-import { RoleModel } from "@/models/role"
+import { RoleModel } from '@/models/role'
 
 export interface NewsModel {
   postBody: {

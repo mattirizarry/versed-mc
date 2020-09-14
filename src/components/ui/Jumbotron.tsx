@@ -24,14 +24,12 @@ const Jumbotron: FC<Props> = ({
       <Image fluid={fluid} />
       <section className="jumbotron-text">
         <h1>{header}</h1>
-        { subHeader && <code>{subHeader}</code> }
-        { 
-          buttonText 
-            && 
+        {subHeader && <code>{subHeader}</code>}
+        {buttonText && (
           <button className="cta-button">
             <Link to={buttonSlug}>{buttonText}</Link>
           </button>
-        }
+        )}
       </section>
     </section>
   )

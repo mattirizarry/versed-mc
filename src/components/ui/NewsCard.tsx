@@ -9,8 +9,12 @@ import Role from './Role'
 import { v4 } from 'uuid'
 import { Link } from 'gatsby'
 
-const NewsCard: FC<NewsModel> = ({ postTitle, author, pageSlug, featuredImage }) => {
-
+const NewsCard: FC<NewsModel> = ({
+  postTitle,
+  author,
+  pageSlug,
+  featuredImage,
+}) => {
   const [modalActive, setModalActive] = useState<boolean>(false)
 
   const _handleModal = (e: React.MouseEvent) => {
@@ -18,35 +22,33 @@ const NewsCard: FC<NewsModel> = ({ postTitle, author, pageSlug, featuredImage })
   }
 
   const _displayAuthorRoles = (roles: RoleModel[]) => {
-    return roles.map((role) => <Role key={ v4() } { ...role }/>)
+    return roles.map(role => <Role key={v4()} {...role} />)
   }
 
   return (
     <section className="news-card">
-      <Image className="featured-image" fluid={ featuredImage.fluid }/>
+      <Image className="featured-image" fluid={featuredImage.fluid} />
       <section className="post-information">
-        <section 
+        <section
           className="author-information"
-          onMouseEnter={ _handleModal }
-          onMouseLeave={ _handleModal }
+          onMouseEnter={_handleModal}
+          onMouseLeave={_handleModal}
         >
-          <Image 
-            className="author-profile" 
-            fluid={ author.profilePicture.fluid } 
+          <Image
+            className="author-profile"
+            fluid={author.profilePicture.fluid}
           />
-          { 
-            modalActive 
-              &&
+          {modalActive && (
             <section className="author-modal">
-              <h3 className="author-name">{ author.name }</h3>
+              <h3 className="author-name">{author.name}</h3>
               <section className="author-roles">
-                { _displayAuthorRoles(author.roles) }
+                {_displayAuthorRoles(author.roles)}
               </section>
-            </section> 
-          }
+            </section>
+          )}
         </section>
-        <Link to={`/news/${ pageSlug }`}>
-          <h2 className="post-title">{ postTitle }</h2>
+        <Link to={`/news/${pageSlug}`}>
+          <h2 className="post-title">{postTitle}</h2>
         </Link>
       </section>
     </section>

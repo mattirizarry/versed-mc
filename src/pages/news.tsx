@@ -12,7 +12,6 @@ import SEO from '@/components/SEO'
 import Jumbotron from '@/components/ui/Jumbotron'
 
 const News = () => {
-
   const query = useStaticQuery(
     graphql`
       {
@@ -54,18 +53,18 @@ const News = () => {
   )
 
   const _renderNewsCards = (news: NewsModel[]) => {
-    return news.map((newsPost) => <NewsCard key={ v4() } { ...newsPost } />)
+    return news.map(newsPost => <NewsCard key={v4()} {...newsPost} />)
   }
-  
+
   return (
     <Layout>
       <SEO title="News" />
-        <Jumbotron 
-          fluid={ query.allContentfulAsset.nodes[0].fluid }
-          header="News, Announcements and More"
-        />
+      <Jumbotron
+        fluid={query.allContentfulAsset.nodes[0].fluid}
+        header="News, Announcements and More"
+      />
       <section className="news">
-        { _renderNewsCards(query.allContentfulNews.nodes) }
+        {_renderNewsCards(query.allContentfulNews.nodes)}
       </section>
     </Layout>
   )
