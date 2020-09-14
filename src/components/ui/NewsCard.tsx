@@ -15,6 +15,7 @@ const NewsCard: FC<NewsModel> = ({
   author,
   pageSlug,
   featuredImage,
+  createdAt
 }) => {
   const [modalActive, setModalActive] = useState<boolean>(false)
 
@@ -50,6 +51,7 @@ const NewsCard: FC<NewsModel> = ({
         </section>
         <Link to={`/news/${pageSlug}`}>
           <h2 className="post-title">{postTitle}</h2>
+          <em className="post-date">{createdAt.substr(0, 10)}</em>
         </Link>
       </section>
     </section>

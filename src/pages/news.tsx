@@ -41,6 +41,7 @@ const News = () => {
               }
             }
             pageSlug
+            createdAt
             featuredImage {
               fluid {
                 ...GatsbyContentfulFluid
@@ -61,7 +62,7 @@ const News = () => {
       <SEO title="News" />
       <Jumbotron
         fluid={query.allContentfulAsset.nodes[0].fluid}
-        header="News, Announcements and More"
+        header="News, Updates and More"
       />
       <section className="news">
         {_renderNewsCards(query.allContentfulNews.nodes)}

@@ -5,6 +5,7 @@ export interface NewsModel {
     json: any
   }
   postTitle: string
+  createdAt: string
   pageSlug: string
   author: {
     name: string

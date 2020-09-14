@@ -29,15 +29,15 @@ const Header = () => {
   const [discordOnline, setDiscordOnline] = useState<Number>(0)
 
   useEffect(() => {
-    fetch('https://discordapp.com/api/guilds/311419744567820289/widget.json', {
-      mode: 'no-cors',
-    })
+    fetch('https://discordapp.com/api/guilds/311419744567820289/widget.json')
       .then(resp => resp.json())
       .then(data => setDiscordOnline(data.presence_count))
+      .catch(err => console.log(err))
 
     fetch('https://api.mcsrvstat.us/2/play.versedmc.com')
       .then(resp => resp.json())
       .then(data => setServerOnline(data.players.online))
+      .catch(err => console.log(err))
   }, [])
 
   const _handleNavigation = (e: SyntheticEvent) => {
@@ -68,7 +68,7 @@ const Header = () => {
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-      </button>
+      </button>  
       <Image fluid={query.allContentfulAsset.nodes[0].fluid} />
       <Navigation active={navigationActive} />
       <section className="quick-info">

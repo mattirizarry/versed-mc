@@ -3,6 +3,7 @@
 import { createElement, FC } from 'react'
 import Image from 'gatsby-image'
 import { Link } from 'gatsby'
+import AnimatedLink from '@/components/ui/AnimatedLink'
 
 interface Props {
   fluid: any
@@ -26,9 +27,7 @@ const Jumbotron: FC<Props> = ({
         <h1>{header}</h1>
         {subHeader && <code>{subHeader}</code>}
         {buttonText && (
-          <button className="cta-button">
-            <Link to={buttonSlug}>{buttonText}</Link>
-          </button>
+          <AnimatedLink to={buttonSlug} className="cta-button">{buttonText}</AnimatedLink>
         )}
       </section>
     </section>

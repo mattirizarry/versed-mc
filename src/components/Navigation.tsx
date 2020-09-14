@@ -1,12 +1,12 @@
 /** @jsx createElement */
 
 import { createElement, FC } from 'react'
-import { Link } from 'gatsby'
 import { v4 } from 'uuid'
 
 import { navigationRoutes } from '@/config/routes'
 
 import { Route } from '@/models/route'
+import AnimatedLink from '@/components/ui/AnimatedLink'
 
 interface Props {
   active: boolean
@@ -18,14 +18,14 @@ const Navigation: FC<Props> = ({ active }) => {
       const { slug, label } = route
 
       return (
-        <Link
+        <AnimatedLink
           key={v4()}
           to={slug}
           className="nav-link"
-          activeClassName={'active'}
+          activeClassName="active"
         >
           {label.toLowerCase()}
-        </Link>
+        </AnimatedLink>
       )
     })
   }

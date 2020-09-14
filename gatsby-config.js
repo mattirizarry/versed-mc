@@ -22,6 +22,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: 'gatsby-source-contentful',
       options: {

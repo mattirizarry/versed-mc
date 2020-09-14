@@ -27,19 +27,30 @@
 
       .author-information
         .author-profile
-          height: 4rem
-          width: 4rem
+          height: 5rem
+          width: 5rem
           border-radius: 50%
 
       a
-        font-family: $font-bold
-        font-size: $font-24
-        font-weight: 600
         align-self: center
         justify-self: end
-        color: #fff
-        text-decoration: underline
-        font-style: italic
+        display: grid
+        row-gap: 0.6rem
+        text-decoration: none
+
+        .post-title
+          font-family: $font-bold
+          font-size: $font-24
+          font-weight: 600
+          color: #fff
+          text-decoration: underline
+          font-style: italic
+
+        .post-date
+          font-family: $font-normal
+          font-size: $font-12
+          color: $white
+          text-align: right
 
       .author-modal
         position: absolute
