@@ -1,0 +1,73 @@
+.news
+  padding: 4rem
+  display: grid
+  row-gap: 2rem
+
+  .news-card
+    display: grid
+    grid: auto / auto 1fr
+    column-gap: 2rem
+    position: relative
+    background: $lightgray
+    border-radius: 0.5rem
+    border: 0.1rem solid lighten($lightgray, 5%)
+    
+    .featured-image
+      grid-area: 1 / 1 / 2 / 3
+      padding-bottom: 1rem
+      border-bottom: 0.4rem solid $orange
+      border-radius: 0.5rem 0.5rem 0 0
+
+    .post-information
+      padding: 1rem
+      display: grid
+      grid: auto / 4rem 1fr
+      grid-area: 2 / 1 / 2 / 3
+      justify-content: space-between
+
+      .author-information
+        .author-profile
+          height: 4rem
+          width: 4rem
+          border-radius: 50%
+
+      a
+        font-family: $font-bold
+        font-size: $font-24
+        font-weight: 600
+        align-self: center
+        justify-self: end
+        color: #fff
+        text-decoration: underline
+        font-style: italic
+
+      .author-modal
+        position: absolute
+        margin-top: 1rem
+        background: $lightgray
+        padding: 1rem
+        border-radius: 0.2rem
+        box-shadow: 0 0 1.5rem 0 rgba(0,0,0,0.75)
+        display: grid
+
+        .author-name
+          font-family: $font-bold
+          font-size: $font-20
+          font-weight: bold
+          color: $white
+          padding-bottom: 1rem
+          margin-bottom: 1rem
+          border-bottom: 0.1rem solid lighten($lightgray, 5%)
+
+        .author-roles
+          display: grid
+          row-gap: 0.5rem
+
+          .author-role
+            border-radius: 1rem
+            font-family: $font-normal
+            font-size: $font-12
+            font-weight: bold
+            font-style: italic
+            text-align: center
+            padding: 0.5rem 1rem

@@ -12,16 +12,6 @@ const IndexPage = () => {
   const query = useStaticQuery(
     graphql`
       {
-        allContentfulNews {
-          nodes {
-            id
-            postBody {
-              id
-              json
-            }
-            pageSlug
-          }
-        }
         allContentfulAsset(filter: { title: { eq: "jumbotron" } }) {
           nodes {
             fluid {
