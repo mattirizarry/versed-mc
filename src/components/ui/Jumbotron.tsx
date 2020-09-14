@@ -27,7 +27,9 @@ const Jumbotron: FC<Props> = ({
         <h1>{header}</h1>
         {subHeader && <code>{subHeader}</code>}
         {buttonText && (
-          <AnimatedLink to={buttonSlug} className="cta-button">{buttonText}</AnimatedLink>
+          <AnimatedLink to={buttonSlug} className="cta-button">
+            {buttonText}
+          </AnimatedLink>
         )}
       </section>
     </section>

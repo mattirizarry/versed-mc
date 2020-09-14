@@ -12,17 +12,22 @@ interface Props {
   activeClassName?: string
 }
 
-const AnimatedLink: FC<Props> = ({ children, to, className, activeClassName }) => {
+const AnimatedLink: FC<Props> = ({
+  children,
+  to,
+  className,
+  activeClassName,
+}) => {
   return (
-    <AniLink  
-      paintDrip 
+    <AniLink
+      paintDrip
       duration={0.4}
       hex="#212529"
-      to={ to }
-      className={ className }
-      activeClassName={ activeClassName }
+      to={to}
+      className={className}
+      activeClassName={activeClassName}
     >
-      { children }
+      {children}
     </AniLink>
   )
 }

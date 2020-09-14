@@ -15,7 +15,7 @@ const NewsCard: FC<NewsModel> = ({
   author,
   pageSlug,
   featuredImage,
-  createdAt
+  createdAt,
 }) => {
   const [modalActive, setModalActive] = useState<boolean>(false)
 

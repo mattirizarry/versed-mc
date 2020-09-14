@@ -68,7 +68,7 @@ const Header = () => {
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
-      </button>  
+      </button>
       <Image fluid={query.allContentfulAsset.nodes[0].fluid} />
       <Navigation active={navigationActive} />
       <section className="quick-info">
