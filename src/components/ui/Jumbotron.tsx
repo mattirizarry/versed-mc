@@ -12,22 +12,25 @@ interface Props {
   buttonSlug: string
 }
 
-const Jumbotron: FC<Props> = ({ fluid, header, subHeader, buttonSlug, buttonText }) => {
+const Jumbotron: FC<Props> = ({
+  fluid,
+  header,
+  subHeader,
+  buttonSlug,
+  buttonText,
+}) => {
   return (
-    
     <section className="jumbotron">
-    <Image fluid={ fluid } />
-    <section className="jumbotron-text">
-      <h1>{ header }</h1>
-      <code>{ subHeader }</code>
-      <button className="cta-button">
-        <Link to={ buttonSlug }>
-          { buttonText }
-        </Link>
-      </button>
+      <Image fluid={fluid} />
+      <section className="jumbotron-text">
+        <h1>{header}</h1>
+        <code>{subHeader}</code>
+        <button className="cta-button">
+          <Link to={buttonSlug}>{buttonText}</Link>
+        </button>
+      </section>
     </section>
-  </section>
   )
-} 
+}
 
 export default Jumbotron

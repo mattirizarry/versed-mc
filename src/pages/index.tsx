@@ -47,16 +47,14 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Jumbotron 
-        fluid={ query.allContentfulAsset.nodes[0].fluid }
+      <Jumbotron
+        fluid={query.allContentfulAsset.nodes[0].fluid}
         header="A premier survival experience"
         subHeader="play.versedmc.com"
         buttonText="news ⟶"
         buttonSlug="/news"
       />
-      <Features 
-        features={ query.allContentfulFeature.nodes }
-      />
+      <Features features={query.allContentfulFeature.nodes} />
     </Layout>
   )
 }
