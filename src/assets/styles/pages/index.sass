@@ -5,7 +5,7 @@
     height: 48rem
 
     img
-      filter: brightness(0.5) blur(0.2rem)
+      filter: brightness(0.5) blur(0.3rem)
 
   .jumbotron-text
     position: absolute
@@ -38,5 +38,59 @@
       text-decoration: underline
       cursor: pointer
 
+    .cta-button
+      border: 0.2rem solid $orange
+      place-self: center
+      border-radius: 0.5rem
+      padding: 1rem 2rem
+      cursor: pointer
 
+      &:hover
+        background: rgba($orange, 0.1)
+        transition: 350ms linear
+
+      a
+        font-family: $font-normal
+        font-weight: bold
+        font-size: $font-18
+        color: #fff
+        text-transform: uppercase
+        text-decoration: none
+
+.features
+  display: grid
+  row-gap: 2rem
+  padding: 1.8rem 1rem
+
+  .feature
+    display: grid
+    grid: 9rem 2.6rem 12rem / 32rem
+    place-items: center
+    justify-self: center
+    padding: 1rem
+    row-gap: 1rem
+
+    h2
+      font-family: $font-bold
+      font-size: $font-26
+      font-weight: 700
+      color: lighten($white, 20%)
+
+    p
+      font-family: $font-normal
+      font-size: $font-20
+      font-weight: 500
+      color: $white
+      align-self: start
+      text-align: center
+
+    svg
+      filter: invert(76%) sepia(33%) saturate(7243%) hue-rotate(359deg) brightness(102%) contrast(107%)
+
+    &:nth-child(odd)
+      background: $lightgray
+      border-radius: 0.5rem
+
+      
+      
     
