@@ -1,6 +1,7 @@
 /** @jsx createElement */
 
 import { createElement, FC } from 'react'
+
 import { RoleModel } from '@/models/role'
 
 const Role: FC<RoleModel> = ({ roleName, colorCode }) => {

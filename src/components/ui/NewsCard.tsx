@@ -2,12 +2,13 @@
 
 import { createElement, FC, useState } from 'react'
 import Image from 'gatsby-image'
+import { v4 } from 'uuid'
+import { Link } from 'gatsby'
 
 import { NewsModel } from '@/models/news'
 import { RoleModel } from '@/models/role'
-import Role from './Role'
-import { v4 } from 'uuid'
-import { Link } from 'gatsby'
+
+import Role from '@/components/ui/Role'
 
 const NewsCard: FC<NewsModel> = ({
   postTitle,

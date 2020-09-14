@@ -29,7 +29,9 @@ const Header = () => {
   const [discordOnline, setDiscordOnline] = useState<Number>(0)
 
   useEffect(() => {
-    fetch('https://discordapp.com/api/guilds/311419744567820289/widget.json')
+    fetch('https://discordapp.com/api/guilds/311419744567820289/widget.json', {
+      mode: 'no-cors'
+    })
       .then(resp => resp.json())
       .then(data => setDiscordOnline(data.presence_count))
 

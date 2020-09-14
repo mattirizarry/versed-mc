@@ -1,7 +1,7 @@
 /** @jsx createElement */
 
 import { createElement, FC } from 'react'
-import Image from 'gatsby-image'
+
 import { FeatureModel } from '@/models/feature'
 
 const Feature: FC<FeatureModel> = ({

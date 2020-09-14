@@ -1,9 +1,11 @@
 /** @jsx createElement */
 
 import { createElement, FC } from 'react'
-import { FeatureModel } from '@/models/feature'
-import Feature from '@/components/ui/Feature'
 import { v4 } from 'uuid'
+
+import { FeatureModel } from '@/models/feature'
+
+import Feature from '@/components/ui/Feature'
 
 interface Props {
   features: FeatureModel[]
