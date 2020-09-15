@@ -6,7 +6,7 @@ import { RoleModel } from '@/models/role'
 
 const Role: FC<RoleModel> = ({ roleName, colorCode }) => {
   return (
-    <strong className="author-role" style={{ background: colorCode }}>
+    <strong className="staff-role" style={{ background: colorCode }}>
       {roleName}
     </strong>
   )

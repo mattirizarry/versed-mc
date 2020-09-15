@@ -1,0 +1,56 @@
+.staff-list
+  display: grid
+  row-gap: 2rem
+  padding: 2rem
+  
+  .staff-card
+    display: grid
+    place-self: center
+    border-radius: 0.5rem
+    padding: 1rem
+    width: 24rem
+    row-gap: 1rem
+    border: 0.1rem solid
+
+    &:nth-child(odd)
+      background: $lightgray
+      border-color: lighten($lightgray, 5%)
+      
+    &:nth-child(even)
+      border-color: darken($gray, 5%)
+
+      .staff-name::after
+        border: 0.2rem solid $lightgray
+
+    .staff-name
+      font-family: $font-normal
+      font-weight: bold
+      font-size: $font-22
+      color: lighten($white, 20%)
+      text-align: center
+
+      &::after
+        content: ""
+        border: 0.2rem solid $gray
+        width: 3rem
+        margin: 0.5rem auto 0
+        display: block
+        grid-area: 2 / 1 / 2 / 1
+        place-self: center
+
+    .staff-roles
+      display: grid
+      place-self: center
+      grid: auto / auto-flow 1fr
+      column-gap: 0.4rem
+
+    .gatsby-image-wrapper
+      height: 10rem
+      width: 10rem
+      border-radius: 50%
+      place-self: center
+
+    .staff-bio
+      font-family: $font-normal
+      font-size: $font-14
+      color: #fff
