@@ -32,30 +32,23 @@ const NewsCard: FC<NewsModel> = ({
     <section className="news-card">
       <Image className="featured-image" fluid={featuredImage.fluid} />
       <section className="post-information">
-        <section
-          className="author-information"
-          onMouseEnter={_handleModal}
-          onMouseLeave={_handleModal}
-          onTouchStart={_handleModal}
-          onTouchEnd={_handleModal}
-        >
-          <Image
-            className="author-profile"
-            fluid={author.profilePicture.fluid}
-          />
-          {modalActive && (
-            <section className="author-modal">
-              <h3 className="author-name">{author.name}</h3>
-              <section className="author-roles">
-                {_displayAuthorRoles(author.roles)}
-              </section>
-            </section>
-          )}
-        </section>
+        
         <AnimatedLink to={`/news/${pageSlug}`}>
           <h2 className="post-title">{postTitle}</h2>
           <em className="post-date">{createdAt.substr(0, 10)}</em>
+          <p className="post-preview">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem expedita sint molestias? Nostrum qui eius exercitationem hic ad nemo quae nulla veniam sapiente.</p>
         </AnimatedLink>
+        
+      </section>
+      <section className="author-information">
+        <Image
+          className="author-profile"
+          fluid={author.profilePicture.fluid}
+        />
+        <h3 className="author-name">{author.name}</h3>
+        <section className="author-roles">
+          {_displayAuthorRoles(author.roles)}
+        </section>
       </section>
     </section>
   )

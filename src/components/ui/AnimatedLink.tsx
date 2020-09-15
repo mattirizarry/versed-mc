@@ -21,7 +21,7 @@ const AnimatedLink: FC<Props> = ({
   return (
     <AniLink
       paintDrip
-      duration={0.4}
+      duration={0.5}
       hex="#212529"
       to={to}
       className={className}
