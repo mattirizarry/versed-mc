@@ -6,26 +6,31 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 import Layout from '@/components/Layout'
 import SEO from '@/components/SEO'
+import Jumbotron from '@/components/ui/Jumbotron'
+
 import { options } from '@/helpers/richTextOptions'
 
+import { NewsModel } from '@/models/news'
+
 interface Props {
-  pageContext: {
-    pageSlug: string
-    postBody: {
-      json: any
-    }
-  }
+  pageContext: NewsModel
 }
 
 const NewsPage: FC<Props> = ({
   pageContext: {
-    postBody: { json },
+    postBody: { json }, featuredImage: { fluid }, postTitle
   },
 }) => {
   return (
     <Layout>
       <SEO title="News Page" />
-      {documentToReactComponents(json, options)}
+      <Jumbotron 
+        fluid={ fluid }
+        header={ postTitle }
+      />
+      <section className="post-content">
+        {documentToReactComponents(json, options)}
+      </section>
     </Layout>
   )
 }

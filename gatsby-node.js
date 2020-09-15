@@ -20,12 +20,31 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           {
             allContentfulNews {
               nodes {
-                id
                 postBody {
-                  id
                   json
                 }
+                postTitle
+                author {
+                  name
+                  roles {
+                    colorCode
+                    roleName
+                  }
+                  profilePicture {
+                    fluid {
+                      src
+                      srcSet
+                    }
+                  }
+                }
                 pageSlug
+                featuredImage {
+                  fluid {
+                    src
+                    srcSet
+                  }
+                }
+                createdAt
               }
             }
           }

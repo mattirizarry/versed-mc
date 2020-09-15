@@ -9,6 +9,7 @@ import { NewsModel } from '@/models/news'
 import { RoleModel } from '@/models/role'
 
 import Role from '@/components/ui/Role'
+import AnimatedLink from '@/components/ui/AnimatedLink'
 
 const NewsCard: FC<NewsModel> = ({
   postTitle,
@@ -51,10 +52,10 @@ const NewsCard: FC<NewsModel> = ({
             </section>
           )}
         </section>
-        <Link to={`/news/${pageSlug}`}>
+        <AnimatedLink to={`/news/${pageSlug}`}>
           <h2 className="post-title">{postTitle}</h2>
           <em className="post-date">{createdAt.substr(0, 10)}</em>
-        </Link>
+        </AnimatedLink>
       </section>
     </section>
   )
