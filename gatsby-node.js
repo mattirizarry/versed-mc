@@ -32,16 +32,22 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
                   }
                   profilePicture {
                     fluid {
-                      src
-                      srcSet
+                      base64 
+                      aspectRatio 
+                      src 
+                      srcSet 
+                      sizes 
                     }
                   }
                 }
                 pageSlug
                 featuredImage {
                   fluid {
-                    src
-                    srcSet
+                    base64 
+                    aspectRatio 
+                    src 
+                    srcSet 
+                    sizes 
                   }
                 }
                 createdAt
