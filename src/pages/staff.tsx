@@ -39,6 +39,9 @@ const Staff = () => {
             }
             name
             weight
+            biography {
+              biography
+            }
           }
         }
       }

@@ -7,6 +7,9 @@ export interface StaffModel extends ContentfulComparable {
   }
   roles: RoleModel[]
   name: string
+  biography: {
+    biography: string
+  }
 }
 
 export interface ContentfulStaffResponse {

@@ -18,15 +18,19 @@ interface Props {
 
 const NewsPage: FC<Props> = ({
   pageContext: {
-    postBody: { json }, featuredImage: { fluid }, postTitle
+    postBody: { json }, 
+    featuredImage: { fluid }, 
+    postTitle, 
+    author
   },
 }) => {
   return (
     <Layout>
-      <SEO title="News Page" />
+      <SEO title={ postTitle } />
       <Jumbotron 
         fluid={ fluid }
         header={ postTitle }
+        subHeader={ "by " + author.name }
       />
       <section className="post-content">
         {documentToReactComponents(json, options)}

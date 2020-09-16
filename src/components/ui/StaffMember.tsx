@@ -8,7 +8,7 @@ import { RoleModel } from '@/models/role'
 import Role from '@/components/ui/Role'
 import { v4 } from 'uuid'
 
-const StaffMember: FC<StaffModel> = ({ profilePicture, roles, name }) => {
+const StaffMember: FC<StaffModel> = ({ profilePicture, roles, name, biography }) => {
 
   const _renderStaffRoles = (roles: RoleModel[]) => {
     return roles.map((role) => <Role key={ v4() } {...role} />)
@@ -22,7 +22,7 @@ const StaffMember: FC<StaffModel> = ({ profilePicture, roles, name }) => {
         {_renderStaffRoles(roles)}
       </section>
       <p className="staff-bio">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente quam doloribus, nihil eum repudiandae fugit enim veritatis, dolor delectus fugiat excepturi ab? Sequi consectetur eveniet facere cumque quibusdam, quisquam deserunt autem temporibus, minus et perferendis amet, sunt enim tempore ab!
+        { biography && biography.biography || "test"}
       </p>
     </section>
   )

@@ -1,0 +1,79 @@
+.post-content
+  font-family: $font-normal
+  font-size: $font-12
+  color: $white
+  background: $lightgray
+  padding: 1rem
+  overflow-wrap: break-word
+  word-break: break-word
+  width: 100vw
+  line-height: 1.15
+
+  h1, h2, h3, h4, h5, h6
+    font-family: $font-bold
+    font-weight: 500
+
+    &::after
+      content: ""
+      margin: 0.4rem 0
+      border: 0.1rem solid $orange
+      width: 6rem
+      display: block
+
+    em
+      font-style: italic
+    strong
+      font-weight: bold
+    u
+      text-decoration: none
+
+  h1
+    font-size: $font-40
+
+  h2
+    font-size: $font-36
+  
+  h3
+    font-size: $font-32
+
+  h4
+    font-size: $font-28
+
+  h5
+    font-size: $font-24
+
+  h6
+    font-size: $font-20
+
+  p
+    em
+      font-style: italic
+    strong
+      font-weight: bold
+    u
+      text-decoration: underline
+
+    &.has-code
+      border: 0.2rem solid lighten($lightgray, 10%)
+      background: lighten($lightgray, 5%)
+      margin: 0.5rem 0
+      padding: 1rem
+      border-radius: 0.4rem
+      color: lighten($white, 20%)
+
+    a
+      color: $orange
+
+  ul, ol
+    margin-left: 1.6rem
+
+  ul
+    list-style-type: circle
+  
+  ol
+    list-style-type: decimal
+
+  blockquote
+    padding: 0.8rem 0.8rem 0.8rem 1rem
+    border-left: 0.2rem solid $orange
+    background: lighten($lightgray, 10%)
