@@ -13,18 +13,18 @@
   .site-nav
     position: fixed
     height: 100%
-    width: 24rem
+    width: 30rem
     bottom: 0
-    left: -24rem
+    left: -30rem
     z-index: 9
-    transition: .35s ease-in-out
+    transition: 0.5s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.5s cubic-bezier(0.645, 0.045, 0.355, 1)
     background: rgba($gray, 0.5)
     backdrop-filter: blur(2rem)
     padding: 10rem 0 0
     overflow: hidden
 
     &.is-active
-      transform: translateX(24rem)
+      transform: translateX(30rem)
 
     .site-links
       display: grid
