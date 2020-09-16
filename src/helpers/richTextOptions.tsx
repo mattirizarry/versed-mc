@@ -35,7 +35,6 @@ export const options: Options = {
     },
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
       let id = node.data.target.sys.contentful_id
-      console.log(node.data.target.sys.contentful_id)
 
       return <ContentfulImage id={ id } />
     }

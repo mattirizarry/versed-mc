@@ -23,8 +23,6 @@ const ContentfulImage: FC<{ id: string }> = ({ id }) => {
 
   const fluid = query.allContentfulAsset.nodes.filter((node) => node.contentful_id == id)[0]
 
-  console.log(fluid)
-
   return <Image fluid={ fluid.fluid }/>
 }
 
